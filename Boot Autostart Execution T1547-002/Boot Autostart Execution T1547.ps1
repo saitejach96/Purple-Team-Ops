@@ -6,8 +6,8 @@
 #Set-Itemproperty -path 'HKLM\SYSTEM\CurrentControlSet\Control\Lsa\' -Name 'Authentication Packages' -value $val+'C:\Program Files\VMware\VMware Tools\vmtoolsd.exe'
 
 
-$Val=Get-ItemPropertyValue -path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\Audit\AuditPolicy\ -Name AuditPolicySD
+$Val=Get-ItemPropertyValue -path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\AccessProviders\Windows NT Access Provider -Name ProviderPath
 
-Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\Audit\AuditPolicy\ -Name AuditPolicySD -Value $Val+"Hi, My DLL Path"
+Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\AccessProviders\Windows NT Access Provider -Name ProviderPath -Value $Val+"Hi, My DLL Path"
 
 
